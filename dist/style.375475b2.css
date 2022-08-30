@@ -19,6 +19,11 @@ ol {
 body {
   background: #eee;
   /* body会将背景色自动扩展到整个网页 */
+  min-width: 100vw;
+  min-height: 100vh;
+  /* 把body包括的页面弄成整个屏幕一样宽 */
+  padding: 1px;
+  /* 删除body的margin边距 */
 }
 .globalHeader {
   margin: 15px 30px;
