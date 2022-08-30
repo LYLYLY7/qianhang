@@ -1,0 +1,168 @@
+/* css reset */
+* {
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+
+/* style */
+body {
+  background: #eee;
+  /* body会将背景色自动扩展到整个网页 */
+}
+.globalHeader {
+  margin: 15px 30px;
+}
+@media (min-width: 500px) {
+  .globalHeader {
+    margin: 60px 0;
+  }
+}
+.globalHeader .searchForm {
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 500px) {
+  /* 小于500像素的不运行该语句块*/
+  .searchForm {
+    max-width: 400px;
+    margin-left: auto; /*搜索框居中*/
+    margin-right: auto; /*搜索框居中*/
+  }
+}
+
+.globalHeader .searchForm > input {
+  width: 100%;
+  /* 此时搜索在按钮内按列排列 */
+  margin: right 30px;
+  padding-left: 10px;
+  height: 40px;
+  /* border: none; */
+  /* border:none   用border-radius时先用前面语句覆盖一下*/
+  border: #ddd;
+  border-radius: 4px;
+}
+.globalHeader .searchForm > button {
+  white-space: nowrap;
+  /* 解决搜索两字按列排列 */
+  padding: 0px 20px;
+  border: none;
+  border: #ddd;
+  border-radius: 4px;
+  background: #8f169d;
+  color: #eee;
+  margin-left: 16px;
+}
+.globalMain {
+  margin: 15px 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  /* 如果元素的高度或者宽度固定
+  便可以用margin-left margin-right 居中 */
+}
+.globalMain .siteList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* 三个图标并排，wrap换行 */
+}
+@media (mix-width: 500px) {
+  .siteList {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.globalMain .siteList .site {
+  width: 150px;
+  height: 150px;
+  margin: 20px 10px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* 用border-radius之前 要重置border 
+    border:none*/
+  border-radius: 10px;
+  flex-wrap: wrap;
+  position: relative;
+  cursor: pointer;
+  /* 鼠标样式 是手 */
+}
+.globalMain .siteList .site > .close {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  display: none;
+  cursor: default;
+  /* 鼠标样式是默认样式 */
+}
+.globalMain .siteList .site:hover > .close {
+  /*hover 鼠标浮动
+  刚开始删除键不显示
+  鼠标浮动在上面才会显示 */
+  display: block;
+  /* 此时鼠标会变成输入的样式 */
+}
+.globalMain .siteList .site .close .icon {
+  width: 30px;
+  height: 30px;
+}
+.globalMain .siteList > li > a {
+  text-decoration: none;
+  color: black;
+}
+/* `>` 此符号只能指示紧邻的孩子元素，
+  不能直接.siteList > a
+  */
+
+.globalMain .siteList .site .logo {
+  width: 80px;
+  height: 80px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 75px;
+  text-transform: uppercase;
+  /* 首字母大写 */
+}
+.globalMain .siteList .site .link {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.globalMain .siteList .addButton {
+  width: 150px;
+  height: 150px;
+  margin: 20px 10px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.globalMain .siteList .addButton .icon {
+  width: 80px;
+  height: 80px;
+}
+.globalMain .siteList .addButton .link {
+  font-size: 14px;
+  margin-top: 0px;
+}
