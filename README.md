@@ -15,6 +15,7 @@ rm -rf dist
 ### step2
 
 ```
+parcel build src/index.html --no-minify
 parcel build src/index.html --no-minify --public-url ./
 如果报错，yarn global add parcel@1.9.7
 ```
@@ -29,6 +30,10 @@ parcel build src/index.html --no-minify --public-url ./
 git 操作 .gitgnore 中不能含有 dist 操作
 
 ### step5
+
+提交到本地仓库
+
+### step6
 
 发布网址 https://xxxxxx.github.io/qianhang/dist/index.html
 ！！！ 一定是 dist 文件下的 index.html

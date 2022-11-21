@@ -165,6 +165,7 @@ window.onbeforeunload = function () {
     //在本地设置一个变量x存的就是string
 };
 // 键盘快捷键，按下对应logo的字母自动跳转到相应的页面
+// 但输入网址时，写成小写会自动跳转
 $(document).on('keypress', function (e) {
     console.log(e.key);
     // const key = e.key
@@ -178,4 +179,4 @@ $(document).on('keypress', function (e) {
 });
 // document.addEventListener()
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.5e8c4c92.map
+//# sourceMappingURL=main.e360c2b0.map
