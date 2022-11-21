@@ -116,7 +116,7 @@ var xObject = JSON.parse(x);
 var hashMap = xObject || [
 //浏览器控制台，用parcel会加一个作用域，使得hashMap没有被定义。
 //解决方式： window.hashMap = []
-{ logo: 'A', url: 'https://acfun.cn' }, { logo: 'B', url: 'https://bilbili.com' }, { logo: 'G', url: 'https://google.com' }];
+{ logo: 'W', url: 'https://webjike.com/web.html#row-1' }, { logo: 'A', url: 'http://www.alloyteam.com/nav' }, { logo: 'H', url: 'https://www.htmltrip.com' }];
 var simplifyUrl = function simplifyUrl(url) {
     //删除url里面的https://www.
     return url.replace('https://', '').replace('http://', '').replace('www.', '').replace(/\/.*/, '');
@@ -164,6 +164,7 @@ window.onbeforeunload = function () {
     localStorage.setItem('x', string);
     //在本地设置一个变量x存的就是string
 };
+// 键盘快捷键，按下对应logo的字母自动跳转到相应的页面
 $(document).on('keypress', function (e) {
     console.log(e.key);
     // const key = e.key
@@ -177,4 +178,4 @@ $(document).on('keypress', function (e) {
 });
 // document.addEventListener()
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.7a861112.map
+//# sourceMappingURL=main.5e8c4c92.map
