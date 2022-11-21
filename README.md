@@ -15,7 +15,10 @@ rm -rf dist
 ### step2
 
 ```
+先parcel build src/index.html试试成不成功，如果成功 
+运行这段代码：parcel build src/index.html   --public-url ./
 parcel build src/index.html --no-minify
+不成功则进行下面代码
 parcel build src/index.html --no-minify --public-url ./
 如果报错，yarn global add parcel@1.9.7
 ```
