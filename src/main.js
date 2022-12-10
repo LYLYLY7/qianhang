@@ -11,8 +11,9 @@ const hashMap = xObject || [
     //浏览器控制台，用parcel会加一个作用域，使得hashMap没有被定义。
     //解决方式： window.hashMap = []
     { logo: 'W', url: 'https://webjike.com/web.html#row-1' },
-    { logo: 'A', url: 'http://www.alloyteam.com/nav' },
+    { logo: 'B', url: 'https://www.bilibili.com' },
     { logo: 'H', url: 'https://www.htmltrip.com' },
+    { logo: 'C', url: 'https://cn.vuejs.org' },
 ]
 const simplifyUrl = (url) => {//删除url里面的https://www.
     return url.replace('https://', '')
@@ -68,7 +69,7 @@ $('.addButton')
         })
         render()
     })
-
+// 键盘事件，按对应logo会自动跳转相应页面
 window.onbeforeunload = () => {
     const string = JSON.stringify(hashMap)
     localStorage.setItem('x', string)

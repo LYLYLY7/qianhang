@@ -22,7 +22,13 @@ parcel build src/index.html --no-minify
 parcel build src/index.html --no-minify --public-url ./
 如果报错，yarn global add parcel@1.9.7
 ```
-
+```
+如果出现这样的报错，
+Error: Error opening directory
+请在 parcel build 后面加 --no-cache
+例如
+parcel build src/index.html --no-cache
+```
 ### step3
 
 查看 dist 文件中的 index.html 文件里的 script 标签的路径
